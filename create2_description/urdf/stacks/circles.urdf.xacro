@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<robot name="turtlebot_hardware" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="create2_hardware" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="turtlebot_spacer" params="parent number x_loc y_loc z_loc">
+  <xacro:macro name="create2_spacer" params="parent number x_loc y_loc z_loc">
     <joint name="spacer_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0" />
       <parent link="${parent}"/>
@@ -20,7 +20,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/68-02403-125_Spacer.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/68-02403-125_Spacer.dae"/>
         </geometry>
       </visual>
 
@@ -33,7 +33,7 @@
     </link>
   </xacro:macro>
 
-  <xacro:macro name="turtlebot_standoff_1in" params="parent number x_loc y_loc z_loc">
+  <xacro:macro name="create2_standoff_1in" params="parent number x_loc y_loc z_loc">
     <joint name="standoff_1in_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0" />
       <parent link="${parent}"/>
@@ -52,7 +52,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/68-04552-1000-RA_Turtlebot_M-F_Standoff.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/68-04552-1000-RA_Turtlebot_M-F_Standoff.dae"/>
         </geometry>
       </visual>
 
@@ -65,7 +65,7 @@
     </link>
   </xacro:macro>
 
-  <xacro:macro name="turtlebot_standoff_2in" params="parent number x_loc y_loc z_loc">
+  <xacro:macro name="create2_standoff_2in" params="parent number x_loc y_loc z_loc">
     <joint name="standoff_2in_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0" />
       <parent link="${parent}"/>
@@ -84,7 +84,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/68-04552-2000-RA_Turtlebot_M-F_Standoff.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/68-04552-2000-RA_Turtlebot_M-F_Standoff.dae"/>
         </geometry>
       </visual>
 
@@ -98,7 +98,7 @@
   </xacro:macro>
 
 
-  <xacro:macro name="turtlebot_standoff_8in" params="parent number x_loc y_loc z_loc">
+  <xacro:macro name="create2_standoff_8in" params="parent number x_loc y_loc z_loc">
     <joint name="standoff_8in_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0" />
       <parent link="${parent}"/>
@@ -117,7 +117,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/68-02421-8000-RA_Turtlebot_F-F_Standoff.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/68-02421-8000-RA_Turtlebot_F-F_Standoff.dae"/>
         </geometry>
       </visual>
 
@@ -130,7 +130,7 @@
     </link>
   </xacro:macro>
 
-  <xacro:macro name="turtlebot_standoff_kinect" params="parent number x_loc y_loc z_loc">
+  <xacro:macro name="create2_standoff_kinect" params="parent number x_loc y_loc z_loc">
     <joint name="standoff_kinect_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0" />
       <parent link="${parent}"/>
@@ -149,7 +149,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/68-04556-RA_Kinect_Standoff_Assy.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/68-04556-RA_Kinect_Standoff_Assy.dae"/>
         </geometry>
       </visual>
 
@@ -163,10 +163,10 @@
   </xacro:macro>
 
   <xacro:macro name="stack_circles" params="parent">
-    <turtlebot_spacer parent="${parent}" number="0" x_loc="-0.00254" y_loc="0.1114679" z_loc="0.062992"/>
-    <turtlebot_spacer parent="${parent}" number="1" x_loc="-0.00254" y_loc="-0.1114679" z_loc="0.062992"/>
-    <turtlebot_spacer parent="${parent}" number="2" x_loc="-0.07239" y_loc="-0.1114679" z_loc="0.062992"/>
-    <turtlebot_spacer parent="${parent}" number="3" x_loc="-0.07239" y_loc="0.1114679" z_loc="0.062992"/>
+    <create2_spacer parent="${parent}" number="0" x_loc="-0.00254" y_loc="0.1114679" z_loc="0.062992"/>
+    <create2_spacer parent="${parent}" number="1" x_loc="-0.00254" y_loc="-0.1114679" z_loc="0.062992"/>
+    <create2_spacer parent="${parent}" number="2" x_loc="-0.07239" y_loc="-0.1114679" z_loc="0.062992"/>
+    <create2_spacer parent="${parent}" number="3" x_loc="-0.07239" y_loc="0.1114679" z_loc="0.062992"/>
 
     <joint name="plate_0_joint" type="fixed">
       <origin xyz="-0.04334 0  0.06775704" rpy="0 0 0" />
@@ -187,7 +187,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/plate_0_logo.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/plate_0_logo.dae"/>
         </geometry>
       </visual>
 
@@ -199,10 +199,10 @@
       </collision>
     </link>
 
-    <turtlebot_standoff_2in parent="${parent}" number="0" x_loc="0.0676402" y_loc="0.1314196" z_loc="0.0709803"/>
-    <turtlebot_standoff_2in parent="${parent}" number="1" x_loc="0.0676402" y_loc="-0.1314196" z_loc="0.0709803"/>
-    <turtlebot_standoff_2in parent="${parent}" number="2" x_loc="-0.052832" y_loc="-0.1314196" z_loc="0.0709803"/>
-    <turtlebot_standoff_2in parent="${parent}" number="3" x_loc="-0.052832" y_loc="0.1314196" z_loc="0.0709803"/>
+    <create2_standoff_2in parent="${parent}" number="0" x_loc="0.0676402" y_loc="0.1314196" z_loc="0.0709803"/>
+    <create2_standoff_2in parent="${parent}" number="1" x_loc="0.0676402" y_loc="-0.1314196" z_loc="0.0709803"/>
+    <create2_standoff_2in parent="${parent}" number="2" x_loc="-0.052832" y_loc="-0.1314196" z_loc="0.0709803"/>
+    <create2_standoff_2in parent="${parent}" number="3" x_loc="-0.052832" y_loc="0.1314196" z_loc="0.0709803"/>
 
     <joint name="plate_1_joint" type="fixed">
       <origin xyz="0.04068 0 0.05715" rpy="0 0 0" />
@@ -222,7 +222,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/plate_1_logo.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/plate_1_logo.dae"/>
         </geometry>
       </visual>
 
@@ -234,10 +234,10 @@
       </collision>
     </link>
 
-    <turtlebot_standoff_2in parent="standoff_2in_0_link" number="4" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_2in parent="standoff_2in_1_link" number="5" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_2in parent="standoff_2in_2_link" number="6" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_2in parent="standoff_2in_3_link" number="7" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_2in parent="standoff_2in_0_link" number="4" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_2in parent="standoff_2in_1_link" number="5" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_2in parent="standoff_2in_2_link" number="6" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_2in parent="standoff_2in_3_link" number="7" x_loc="0" y_loc="0" z_loc="0.05715"/>
 
     <joint name="plate_2_joint" type="fixed">
       <origin xyz="0 0 0.0572008" rpy="0 0 0" />
@@ -257,7 +257,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/plate_1_logo.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/plate_1_logo.dae"/>
         </geometry>
       </visual>
 
@@ -269,13 +269,13 @@
       </collision>
     </link>
 
-    <turtlebot_standoff_kinect parent="plate_2_link" number="0" x_loc="-0.1024382" y_loc="0.098" z_loc="0.0032004"/>
-    <turtlebot_standoff_kinect parent="plate_2_link" number="1" x_loc="-0.1024382" y_loc="-0.098" z_loc="0.0032004"/>
+    <create2_standoff_kinect parent="plate_2_link" number="0" x_loc="-0.1024382" y_loc="0.098" z_loc="0.0032004"/>
+    <create2_standoff_kinect parent="plate_2_link" number="1" x_loc="-0.1024382" y_loc="-0.098" z_loc="0.0032004"/>
 
-    <turtlebot_standoff_8in parent="standoff_2in_4_link" number="0" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_8in parent="standoff_2in_5_link" number="1" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_8in parent="standoff_2in_6_link" number="2" x_loc="0" y_loc="0" z_loc="0.05715"/>
-    <turtlebot_standoff_8in parent="standoff_2in_7_link" number="3" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_8in parent="standoff_2in_4_link" number="0" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_8in parent="standoff_2in_5_link" number="1" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_8in parent="standoff_2in_6_link" number="2" x_loc="0" y_loc="0" z_loc="0.05715"/>
+    <create2_standoff_8in parent="standoff_2in_7_link" number="3" x_loc="0" y_loc="0" z_loc="0.05715"/>
 
     <joint name="plate_3_joint" type="fixed">
       <origin xyz="-0.01316 0 0.2063496" rpy="0 0 0" />
@@ -295,7 +295,7 @@
       <visual>
         <origin xyz=" 0 0 0 " rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://turtlebot_description/meshes/stacks/circles/plate_2_logo.dae"/>
+          <mesh filename="package://create2_description/meshes/stacks/circles/plate_2_logo.dae"/>
         </geometry>
       </visual>
 
